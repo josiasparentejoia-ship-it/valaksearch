@@ -3,7 +3,7 @@
   "sections": [
     {
       "name": "DADOS PESSOAIS",
-      "fields": ["CPF", "Nome", "Nascimento", "Sexo", "Mãe", "Pai", "Naturalidade", "Status Receita"]
+      "fields": ["CPF", "Nome", "Nascimento", "Sexo", "Mãe", "Receita"]
     },
     {
       "name": "DOCUMENTOS",
@@ -19,15 +19,7 @@
     },
     {
       "name": "DADOS FINANCEIROS",
-      "fields": ["Renda", "Score", "Classe", "Poder Aquisitivo"]
-    },
-    {
-      "name": "PARENTES",
-      "fields": ["Parentes"]
-    },
-    {
-      "name": "VIZINHOS",
-      "fields": ["Vizinhos"]
+      "fields": ["Renda", "Faixa", "Score", "Classe", "Poder Aquisitivo"]
     }
   ]
 }
