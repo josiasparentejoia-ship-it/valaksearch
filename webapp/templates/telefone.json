@@ -1,0 +1,13 @@
+{
+  "title": "CONSULTA DE TELEFONE",
+  "sections": [
+    {
+      "name": "IDENTIFICAÇÃO",
+      "fields": ["Telefone", "Nome", "CPF/CNPJ"]
+    },
+    {
+      "name": "ENDEREÇO",
+      "fields": ["Logradouro", "Número", "Complemento", "Bairro", "Cidade", "Estado", "CEP"]
+    }
+  ]
+}
