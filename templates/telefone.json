@@ -1,0 +1,29 @@
+{
+  "title": "CONSULTA DE TELEFONE",
+  "sections": [
+    {
+      "name": "BUSCA",
+      "fields": ["Busca", "Resultados"]
+    },
+    {
+      "name": "RESULTADO 1",
+      "fields": ["CPF 1", "Tel 1", "Nome 1"]
+    },
+    {
+      "name": "RESULTADO 2",
+      "fields": ["CPF 2", "Tel 2", "Nome 2"]
+    },
+    {
+      "name": "RESULTADO 3",
+      "fields": ["CPF 3", "Tel 3", "Nome 3"]
+    },
+    {
+      "name": "RESULTADO 4",
+      "fields": ["CPF 4", "Tel 4", "Nome 4"]
+    },
+    {
+      "name": "RESULTADO 5",
+      "fields": ["CPF 5", "Tel 5", "Nome 5"]
+    }
+  ]
+}

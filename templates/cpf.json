@@ -1,0 +1,33 @@
+{
+  "title": "CONSULTA DE CPF",
+  "sections": [
+    {
+      "name": "DADOS PESSOAIS",
+      "fields": ["CPF", "Nome", "Nascimento", "Sexo", "Mãe", "Pai", "Naturalidade", "Status Receita"]
+    },
+    {
+      "name": "DOCUMENTOS",
+      "fields": ["PIS"]
+    },
+    {
+      "name": "CONTATOS",
+      "fields": ["Telefones"]
+    },
+    {
+      "name": "ENDEREÇO PRINCIPAL",
+      "fields": ["Rua", "Bairro", "Cidade", "CEP"]
+    },
+    {
+      "name": "DADOS FINANCEIROS",
+      "fields": ["Renda", "Score", "Classe", "Poder Aquisitivo"]
+    },
+    {
+      "name": "PARENTES",
+      "fields": ["Parentes"]
+    },
+    {
+      "name": "VIZINHOS",
+      "fields": ["Vizinhos"]
+    }
+  ]
+}
