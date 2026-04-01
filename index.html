@@ -310,16 +310,32 @@ btnReveal.addEventListener('click', async () => {
     if (!res.ok) throw new Error(`Template "${cmd}" não encontrado.`);
     const template = await res.json();
 
-    const values = rawVals.split('|').map(v =>
-      decodeURIComponent(v.replace(/\+/g, ' ')).trim()
-    );
+    // Suporta formato chave:valor (robusto) e posicional (legado)
+    const valueMap = {};
+    let positional = [];
+    const isKeyValue = rawVals.includes(':') && rawVals.split('|')[0].includes(':');
+
+    if (isKeyValue) {
+      rawVals.split('|').forEach(pair => {
+        const ci = pair.indexOf(':');
+        if (ci > 0) {
+          const k = decodeURIComponent(pair.slice(0, ci)).trim();
+          const v = decodeURIComponent(pair.slice(ci + 1).replace(/\+/g, ' ')).trim();
+          valueMap[k] = v;
+        }
+      });
+    } else {
+      positional = rawVals.split('|').map(v =>
+        decodeURIComponent(v.replace(/\+/g, ' ')).trim()
+      );
+    }
 
     let idx = 0;
     allData = template.sections.map(sec => ({
       name:   sec.name,
       fields: sec.fields.map(label => ({
         label,
-        value: values[idx++] ?? '',
+        value: isKeyValue ? (valueMap[label] ?? '') : (positional[idx++] ?? ''),
       })),
     }));
 
