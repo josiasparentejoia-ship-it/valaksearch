@@ -20,6 +20,14 @@
     {
       "name": "DADOS FINANCEIROS",
       "fields": ["Renda", "Faixa", "Score", "Classe", "Poder Aquisitivo"]
+    },
+    {
+      "name": "PARENTES",
+      "fields": ["Parentes"]
+    },
+    {
+      "name": "VIZINHOS",
+      "fields": ["Vizinhos"]
     }
   ]
 }

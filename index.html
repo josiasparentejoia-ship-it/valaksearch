@@ -306,7 +306,7 @@ btnReveal.addEventListener('click', async () => {
   }
 
   try {
-    const res = await fetch(`templates/${cmd}.json`);
+    const res = await fetch(`templates/${cmd}.json?t=${Date.now()}`);
     if (!res.ok) throw new Error(`Template "${cmd}" não encontrado.`);
     const template = await res.json();
 
@@ -320,8 +320,8 @@ btnReveal.addEventListener('click', async () => {
       fields: sec.fields.map(label => ({
         label,
         value: values[idx++] ?? '',
-      })),
-    }));
+      })).filter(f => f.value !== '' && f.value !== '—'),
+    })).filter(sec => sec.fields.length > 0);
 
     render(allData);
     resultsDiv.classList.add('visible');
@@ -355,8 +355,8 @@ function render(data) {
       lbl.textContent = label;
 
       const val = document.createElement('div');
-      val.className = 'field-value' + (value ? '' : ' empty');
-      val.textContent = value || '—';
+      val.className = 'field-value';
+      val.textContent = value;
 
       content.appendChild(lbl);
       content.appendChild(val);
